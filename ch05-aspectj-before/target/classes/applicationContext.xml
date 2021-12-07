@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+    <bean id="someService" class="com.cdw.service.impl.SomeServiceImpl"/>
+    <bean id="someService2" class="com.cdw.service2.impl.SomeServiceImpl"/>
+    <bean id="someService3" class="com.cdw.service3.impl.SomeServiceImpl"/>
+    <bean id="someService4" class="com.cdw.service4.impl.SomeServiceImpl"/>
+    <bean id="someService5" class="com.cdw.service5.impl.SomeServiceImpl"/>
+    <bean id="someService6" class="com.cdw.service6.impl.SomeServiceImpl"/>
+    <bean id="someService7" class="com.cdw.service7.impl.SomeServiceImpl"/>
+
+    <bean id="myAspect" class="com.cdw.handle.MyAspect"/>
+    <bean id="myAspect2" class="com.cdw.handle.MyAspect2"/>
+    <bean id="myAspect3" class="com.cdw.handle.MyAspect3"/>
+    <bean id="myAspect4" class="com.cdw.handle.MyAspect4"/>
+    <bean id="myAspect5" class="com.cdw.handle.MyAspect5"/>
+    <bean id="myAspect6" class="com.cdw.handle.MyAspect6"/>
+    <bean id="myAspect7" class="com.cdw.handle.MyAspect7"/>
+
+    <aop:aspectj-autoproxy/>
+
+</beans>

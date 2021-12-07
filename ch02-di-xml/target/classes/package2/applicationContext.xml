@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myStudent" class="com.cdw.package2.Student">
+        <property name="name" value="cdw"/>
+        <property name="age" value="22"/>
+        <property name="school" ref="school"/>
+    </bean>
+
+    <bean id="school" class="com.cdw.package2.School">
+        <property name="name" value="CQUPT"/>
+        <property name="address" value="重庆市"/>
+    </bean>
+
+    <bean id="studentByCons" class="com.cdw.package2.Student">
+        <constructor-arg name="name" value="李斯"/>
+        <constructor-arg name="age" value="22"/>
+        <constructor-arg name="school" ref="school"/>
+    </bean>
+
+    <bean id="studentByIndex" class="com.cdw.package2.Student">
+        <constructor-arg index="0" value="第三方的"/>
+        <constructor-arg index="2" ref="school"/>
+        <constructor-arg index="1" value="555"/>
+    </bean>
+
+    <bean id="myFile" class="java.io.File">
+        <constructor-arg name="parent" value="D:\\cdw\\projects\\spring"/>
+        <constructor-arg name="child" value="readme.txt"/>
+    </bean>
+
+    <bean id="studentByName" class="com.cdw.package2.Student" autowire="byName">
+        <property name="name" value="赵四"/>
+        <property name="age" value="55"/>
+     </bean>
+
+    <bean id="studentByType" class="com.cdw.package2.Student" autowire="byType">
+        <property name="name" value="刘能"/>
+        <property name="age" value="35"/>
+    </bean>
+
+</beans>
